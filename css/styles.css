@@ -96,18 +96,28 @@ h6 {
   padding-top: 24px;
   padding-bottom: 24px;
   display: block;
-  overflow: hidden;
-  position: relative;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.stodio {
+.studio {
   color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+.studio::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  background: #404bbf;
+  left: 0;
+  bottom: -1px;
 }
 .navigation:hover,
 .navigation:focus {
   color: #404bbf;
 }
-.navigation:active::after {
+/* .navigation:active::after {
   transform: translateY(0);
 }
 .navigation::after {
@@ -122,7 +132,7 @@ h6 {
   bottom: -1px;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 .contacts {
   font-style: normal;
@@ -404,7 +414,6 @@ h6 {
 }
 .footer {
   background-color: #2e2f42;
-  max-width: 1440px;
   padding: 100px 0;
 }
 .footer .container {
